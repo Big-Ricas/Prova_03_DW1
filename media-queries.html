@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recursos/estilo.css">
+    <meta author="Big Ricas">
+    <link rel="shortcut icon" href="./recursos//imagens/header 2.png" type="image/x-icon">
+
+    <title>Apresentação Dom Casmurro</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="recursos/imagens/logo.png">
+        <nav>
+            <a class="links-sidebar" href="Index.html">Home</a>
+            <a class="links-sidebar" href="personagem1.html">Bento Santiago</a>
+            <a class="links-sidebar" href="personagem2.html">Capitolina</a>
+            <a class="links-sidebar" href="personagem3.html">Ezequiel Escobar</a>
+            <a class="links-sidebar" href="media-queries.html">Guia de Media Query</a>
+        </nav>
+    </div>
+    <div class="painel-principal">
+        <header>
+            <h1>Guia de Media Queries</h1>
+            <p>descrição e guia do uso de Media Queries com CSS</p>
+        </header>
+
+        <main>
+            <article>
+                <h2>O que é um Media Query?</h2>
+                <p>Media queries são filtros que podem ser aplicados em uma estilização com CSS. Elas facilitam
+                    a mudança na estilização baseada no tipo ou nas características do dispositivo que está renderizando 
+                    o conteúdo da página como, por exemplo, a altura, largura, se o dispositivo está sendo usado como touchscreen e etc.
+                </p>
+                <img src="recursos/imagens/Media-Queries.png">
+                <p>De modo geral Media querries são simples de implementar, tão simples como:</p>
+                    <code>@media (max-width: 600px)</br>
+                    {
+                      .facet_sidebar</br>
+                      background-color: white;</br>
+                       {</br>
+                        display: none;</br>
+                       }</br>
+                    }</code>
+                    <p id="subtexto"> (Nesse caso, em resoluções inferiores á 600px o fundo da página será mudado para a cor branca)</p>
+                <p>No entanto, quando vamos aos fatos, se torna muito trabalhoso ajustar mesmo que seja 1 só resolução a mais,
+                    tal como de um monitor 16:9 para um monitor 4:4 (o que não muda muito honestamente, mas a depender da página
+                    seria necessário uma alteração para casos assim).</p>
+                    <p>Ao montar um media querry temos muitas possibilidades de condições para as personalizações, Citando um por um vamos por uma breve explicação da função de cada</p>
+                    <h2>Operadores Lógicos</h2>
+                    <p>Temos Basicamente os operadores lógicos mais comuns, NOT, AND, e ONLY, e com algumas vírgulas podemos ter um resultado semelhante ao OR.
+                        O AND é utilizado para combinar medias features com media types e medias features com outras medias features; o NOT é aplicado para toda a media query e simplesmente nega a estilização da lista em que está presente;
+                        o ONLY serve para previnir que navegadores mais antigos e que não suportam determinada estilização tentem estruturar algo não possível, utilizado justamente par executar os media querries apenas em navegadores que apresentam as características escolhidas
+                        finalmente o OR, que não existe diretamente dentro dos operadores, mas separar as listas por vírgulas têm a sua função, desse modo, quando qualquer uma das querries retornar como verdadeiro, os estilos serão aplicados
+                    </p>
+                    <h2>Características de mídia</h2>
+                    <p>São as "métricas" que serão utilizadas para definir quando que as alterações no estilo serão feitas, sendo assim, as opções são variadas, como se o dispositivo é ou não monocromático, quantos bytes ele apresenta para cara cor, a altura e a largura do aparelho, qual sua resuloção, seu aspecto e sua orientação.</p>
+                    <h3>Listando a maioria deles, temos:</h3>
+                    <ul>
+                        <li>color</li>
+                        <li>color-index</li>
+                        <li>aspect-ratio</li>
+                        <li>device-aspect-ratio</li>
+                        <li>device-height</li>
+                        <li>devide-width</li>
+                        <li>grid</li>
+                        <li>height</li>
+                        <li>width</li>
+                        <li>monochrome</li>
+                        <li>orientation</li>
+                        <li>resolution</li>
+                    </ul>
+                    <p> além desses, alguns navegadores apresentam media querries específicos para utilização quando a navegação é feita por eles, mas isso muda de um para o outro</p>
+                    <p>No caso como exemplo, temos o fundo do site, que tem seu tamanho mudado de acordo com a tamanho da janeja em que é exibido, de modo que ele sempre ocupe todo o espaço livre e não tenha que se repitir para preencher o que falta</p>    
+            </article>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
